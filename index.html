@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2e3a6e">
+  <title>Toplim — Catálogo Virtual</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <a href="#" class="brand-logo" title="Toplim Catálogo">
+      <img src="assets/logo-toplim.png" alt="Toplim" width="119" height="38">
+    </a>
+    <div class="grow">
+      <input id="q" type="search" placeholder="Buscar por nome, código ou marca…" aria-label="Buscar">
+    </div>
+    <select id="cs" aria-label="Catálogo"></select>
+    <button id="pdf" title="Baixar catálogo em PDF" aria-label="Baixar PDF">PDF</button>
+    <button id="th" title="Tema" aria-label="Alternar tema">◐</button>
+    <button id="ad" class="p">Administrador</button>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <div class="chips" id="chips"></div>
+
+    <div class="bar">
+      <select id="sub" aria-label="Subcategoria"></select>
+      <select id="so" aria-label="Ordenar">
+        <option value="n">Ordem: nome A–Z</option>
+        <option value="c">Ordem: código</option>
+        <option value="m">Ordem: marca</option>
+      </select>
+      <select id="vw" aria-label="Visualização">
+        <option value="g">Visual em grade</option>
+        <option value="l">Visual em lista</option>
+      </select>
+    </div>
+
+    <div class="cnt" id="cnt"></div>
+    <div id="out"></div>
+
+    <div class="more">
+      <button id="mo" class="s" hidden>Mostrar mais</button>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="footer-content">
+      <span>Toplim — Catálogo Virtual © Todos os direitos reservados.</span>
+      <div class="footer-partner">
+        <span>Desenvolvimento &amp; Marketing:</span>
+        <img src="assets/logo-ho-marketing-icon.png" alt="HO Marketing Digital" width="56" height="24">
+      </div>
+    </div>
+  </footer>
+
+  <!-- PAINEL ADMINISTRATIVO -->
+  <div id="adm" class="sheet" hidden></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
